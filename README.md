@@ -34,7 +34,7 @@ Ensure you have the following installed:
 ### Steps to Run Locally:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/product-catalog.git
+   git clone https://github.com/yourusername/product-catalog.git](https://github.com/AhmedElsheekh/ProductCatalogWebApplicaion.git
    cd product-catalog
    ```
 
