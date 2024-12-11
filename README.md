@@ -1,5 +1,3 @@
-# ProductCatalogWebApplicaion
-
 # Product Catalog Web Application
 
 ## Overview
