@@ -1,0 +1,40 @@
+﻿@using Product_Catalog_Web_Application.Core.ViewModels
+@model ProductCreateVM
+
+<h2>Create Product</h2>
+
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Product Name</label>
+        <input type="text" id="Name" name="Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="number" id="Price" name="Price" class="form-control" step="0.01" required />
+    </div>
+    <div class="form-group">
+        <label for="Category">Category</label>
+        <select id="Category" name="CategoryId" class="form-control">
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input type="date" id="StartDate" name="StartDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Duration">Duration (Days)</label>
+        <input type="number" id="Duration" name="Duration" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Product</button>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+{
+    <div class="alert alert-danger">
+        @ViewData["ErrorMessage"]
+    </div>
+}

@@ -1,0 +1,26 @@
+﻿@using Product_Catalog_Web_Application.Core.ViewModels
+@model ProductDetailsVM
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text"><strong>Price:</strong> $@Model.Price</p>
+        <p class="card-text"><strong>Category:</strong> @Model.Category</p>
+        <p class="card-text"><strong>Start Date:</strong> @Model.StartDate.ToShortDateString()</p>
+        <p class="card-text"><strong>Duration:</strong> @Model.Duration days</p>
+        <p class="card-text"><strong>Created By:</strong> @Model.CreatedByUser</p>
+        
+    </div>
+</div>
+
+<a asp-controller="Product" asp-action="Index" class="btn btn-primary">Back To List</a>
+<a asp-controller="Product" asp-action="Update" class="btn btn-warning">Update</a>
+<a asp-controller="Product" asp-action="Delete" class="btn btn-danger">Delete</a>
+
+
